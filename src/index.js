@@ -1,21 +1,44 @@
 import _ from 'lodash';
 import './style.css';
-import Icon from './icon.png';
 
-function component() {
-  const element = document.createElement('div');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+// function component() {
+//   const element = document.createElement('div');
 
-  // Add the image to our existing div.
-  const myIcon = new Image();
-  myIcon.src = Icon;
+//   // Lodash, now imported by this script
+//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+//   element.classList.add('hello');
 
-  element.appendChild(myIcon);
+//   // Add the image to our existing div.
+//   const myIcon = new Image();
+//   myIcon.src = Icon;
 
-  return element;
-}
+//   element.appendChild(myIcon);
 
-document.body.appendChild(component());
+//   return element;
+// }
+
+// document.body.appendChild(component());
+
+let listItems = [
+  {
+  description: "Write an email",
+  completed: true,
+  index: 0,
+  },
+  {
+    description: "Laundry",
+    completed: false,
+    index: 1,
+    },
+    {
+      description: "Read a book",
+      completed: true,
+      index: 2,
+      },
+      {
+        description: "Submit assignment",
+        completed: false,
+        index: 3,
+        }      
+]
