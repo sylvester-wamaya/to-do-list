@@ -47,8 +47,11 @@ const list = document.querySelector('ul');
 listItems.forEach((item)=>{
   const listItem = document.createElement('li');
   listItem.innerHTML = `
+  <div class="content">
   <input type="checkbox" class="to-do" name="todo${item.index}" value="${item.completed}">
-  <label for="todo${item.index}"> ${item.description}</label><br>`
+  <label for="todo${item.index}"> ${item.description}</label>
+  </div>
+  <i class="fa fa-ellipsis-v" aria-hidden="true"></i>`
 
   list.appendChild(listItem)
 })
