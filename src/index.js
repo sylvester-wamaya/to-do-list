@@ -42,3 +42,14 @@ let listItems = [
         index: 3,
         }      
 ]
+const list = document.querySelector('ul');
+
+listItems.forEach((item)=>{
+  const listItem = document.createElement('li');
+  listItem.innerHTML = `
+  <input type="checkbox" class="to-do" name="todo${item.index}" value="${item.completed}">
+  <label for="todo${item.index}"> ${item.description}</label><br>`
+
+  list.appendChild(listItem)
+})
+
