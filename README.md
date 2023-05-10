@@ -166,10 +166,10 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Add display section page.
-- [ ] Add add book section page
-- [ ] Add contact page.
-- [ ] Add more styling.
+- [ ] Add add to to item functionality.
+- [ ] Add remove to do item functionality.
+- [ ] Add Edit functionality.
+- [ ] Add Clear all functionality.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
