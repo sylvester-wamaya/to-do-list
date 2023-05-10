@@ -1,8 +1,62 @@
-body {
-  background-color: bisque;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#hello {
-  color: red;
-  background: url('./icon.png');
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(66, 66, 66);
+}
+
+li {
+  list-style: none;
+  border-bottom: solid 1px rgb(211, 209, 209);
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
+}
+
+main {
+  width: 50%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: rgba(119, 117, 117, 0.66) 0 0.2rem 0.5rem;
+}
+
+.to-do {
+  margin-right: 1vw;
+}
+
+i {
+  color: rgb(211, 209, 209);
+}
+
+li:has(> input) {
+  padding: 0 1vw;
+  align-items: center;
+}
+
+#toDo {
+  padding: 1vw;
+  width: 100%;
+  border: none;
+  margin-right: 1vw;
+  font-style: italic;
+}
+
+button {
+  padding: 1.5vw;
+  width: 100%;
+  border: none;
+  color: rgb(110, 109, 109);
+  background-color: hsl(0, 0%, 96%);
+  font-size: 100%;
+}
+
+input:focus {
+  outline: none;
+  color: rgb(110, 109, 109);
 }

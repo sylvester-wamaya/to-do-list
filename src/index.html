@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+    <title>To do list</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+    <main>
+        <ul id="list">
+            <li id="title">
+                Today's To Do <i class="fa fa-sign-in" aria-hidden="true"></i>
+            </li>
+            <li>
+                <input type="text" id="toDo" name="toDo" placeholder="Add to your list...">
+                <i class="fa fa-recycle" aria-hidden="true"></i>
+            </li>
+
+        </ul>
+        <button type="button">Clear all completed</button>
+    </main>
 </body>
 </html>
