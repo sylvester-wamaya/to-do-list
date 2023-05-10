@@ -4,10 +4,9 @@
 
 <div align="center">
 
-  <img src="assets/download (2).png" alt="logo" width="140"  height="auto" />
-  <br/>
 
-  <h3><b>Javascript Webpack setup</b></h3>
+
+<h3><b>To do List Website</b></h3>
 
 </div>
 
@@ -36,10 +35,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Javascript Webpack setup <a name="about-project"></a>
+# 📖 To do Website <a name="about-project"></a>
 
 
-Javascript Webpack setup is a project that sets up a webpack for javascript. I created the project using HTML and CSS, Javascript and webpack and other bundles.
+To do List Website is a project that allows a user to add to do tasks, display the tasks and remove them. I created the project using HTML and CSS and Javascript.
 
 ## 🛠 Built With <a name="built-with"></a>
 1- HTML.
@@ -55,7 +54,7 @@ Javascript Webpack setup is a project that sets up a webpack for javascript. I c
   <ul>
     <li><a href="https://html.com/">HTML</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/">CSS</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Javascript/">Javascript</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a></li>
   </ul>
 </details>
 
@@ -66,13 +65,26 @@ Javascript Webpack setup is a project that sets up a webpack for javascript. I c
 ### Key Features <a name="key-features"></a>
 
 - Added HTML file.
-- Added CSS file.
-- Added Javascript file.
-- Set up Webpack.
+- Added style.css file.
+- Added list container.
+- Added clear button.
+- Added input section
+- Added a list to display the to do lists
+- Added styling to the page.
+- Added to do array in javascript
+- Rendered the to do items dynamically.
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Coming soon...
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -99,7 +111,7 @@ Clone this repository to your desired folder:
 Run this command:
 
 ```sh
-git clone git@github.com:sylvester-wamaya/webpack.git
+git clone git@github.com:sylvester-wamaya/to-do-list.git
 ```
 
 
@@ -110,8 +122,9 @@ Install this project with:
 Run this command:
 
 ```sh
-  cd webpack
+  cd my-project
   npm install
+  npm run build
 ```
 
 
@@ -119,7 +132,7 @@ Run this command:
 
 To run the project, execute the following command:
 ```sh
-Run server
+npm start
 ```
 
 
@@ -128,17 +141,23 @@ Run server
 > Coming soon
 
 
+
+### Deployment
+
+> Coming soon...
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 Sylvester Wamaya
+👤 Sylvester WAMAYA
 
 - GitHub: [@githubhandle](https://github.com/sylvester-wamaya)
 - Twitter: [@twitterhandle](https://twitter.com/The_Seal_)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/sylvester-wamaya-b11a93112/)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -147,12 +166,10 @@ Run server
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Add more HTML content.
-- [ ] Add more webpack setups.
-- [ ] Add more packages.
-- [ ] Add more styles.
-
-
+- [ ] Add display section page.
+- [ ] Add add book section page
+- [ ] Add contact page.
+- [ ] Add more styling.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
