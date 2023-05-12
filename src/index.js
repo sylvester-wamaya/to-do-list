@@ -1,37 +1,55 @@
 import './style.css';
+import List from './crud.js';
 
-const listItems = [
-  {
-    description: 'Write an email',
-    completed: true,
-    index: 0,
-  },
-  {
-    description: 'Laundry',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Read a book',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Submit assignment',
-    completed: false,
-    index: 3,
-  },
-];
-const list = document.querySelector('ul');
+// Create a ne todo list
+const todo = new List();
 
-listItems.forEach((item) => {
-  const listItem = document.createElement('li');
-  listItem.innerHTML = `
-  <div class="content">
-  <input type="checkbox" class="to-do" name="todo${item.index}" value="${item.completed}">
-  <label for="todo${item.index}"> ${item.description}</label>
-  </div>
-  <i class="fa fa-ellipsis-v" aria-hidden="true"></i>`;
+todo.display(); // Display to do list
+todo.submit(); // Submit and add new to do task
+todo.change();
 
-  list.appendChild(listItem);
+// Add edit styling on the list items
+document.addEventListener('focus', (e) => {
+  if (e.target.classList.contains('list-item')) {
+    const parent = e.target.parentNode.parentNode;
+    parent.style.background = '#ff0';
+    e.target.style.background = '#ff0';
+
+    parent.children[1].style.display = 'none';
+    parent.children[2].style.display = 'block';
+    parent.children[0].children[0].style.opacity = 0.5;
+  }
+}, true);
+
+// Remove edit styling on the list items
+document.addEventListener('blur', (e) => {
+  if (e.target.classList.contains('list-item')) {
+    const parent = e.target.parentNode.parentNode;
+    parent.style.background = '';
+    e.target.style.background = '';
+
+    parent.children[1].style.display = 'block';
+    parent.children[2].style.display = 'none';
+    parent.children[0].children[0].style.opacity = 1;
+  }
+}, true);
+
+// Display trash and hide the 3dots after click
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('dots')) {
+    const parent = e.target.parentNode;
+
+    parent.children[1].style.display = 'none';
+    parent.children[2].style.display = 'block';
+  }
+});
+
+// Enable strike through the list item on checkbox click
+// This works only after DOM refresh if added new tasks
+const checkb = document.querySelectorAll('.to-do');
+
+checkb.forEach((box) => {
+  box.addEventListener('click', (e) => {
+    e.target.parentNode.children[1].classList.toggle('checked');
+  });
 });
