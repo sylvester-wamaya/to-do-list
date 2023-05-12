@@ -40,12 +40,15 @@ li:has(> input) {
   align-items: center;
 }
 
-#toDo {
+#toDo, .list-item {
   padding: 1vw;
   width: 100%;
   border: none;
   margin-right: 1vw;
   font-style: italic;
+}
+.list-item{
+  font-style: normal;
 }
 
 button {
@@ -60,11 +63,18 @@ button {
 input:focus {
   outline: none;
   color: rgb(110, 109, 109);
+  background-color: red;
 }
-.trash{
+.div-trash{
   color: rgb(164, 161, 161);
+ 
 }
 .content{
   display: flex;
   align-items: center;
+  width: 100%;
+}
+
+.background-color{
+  background-color: red;
 }

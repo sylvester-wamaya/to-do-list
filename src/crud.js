@@ -23,16 +23,18 @@ const todoInput = document.querySelector('#toDo');
     this.list.forEach((item) => {        
         const listItem = document.createElement('li');
         const trash = document.createElement("div")
+        trash.className = "div-trash"
         listItem.innerHTML = `
         <div class="content">
         <input type="checkbox" class="to-do" name="todo${item.index}" value="${item.completed}">
-        <label for="todo${item.index}"> ${item.description}</label>
+        <input class="list-item" data-list-index="${item.index}" type="text" id="todo${item.index}" name="todo${item.index}" value="${item.description}">
         </div>
         <i class="fa fa-ellipsis-v dots" aria-hidden="true"></i>
         `;
 
         trash.innerHTML = `<i class="fa fa-trash trash" data-list-index="${item.index}" aria-hidden="true"></i>
         `
+  
         listItem.id = `data-${item.index}`
         trash.addEventListener("click", (e)=>{
         const index = e.target.dataset.listIndex - 1
@@ -47,8 +49,8 @@ const todoInput = document.querySelector('#toDo');
   
    } 
 
-    add(todo){
-    const todoItem = new Todo(todo)
+    add(description){
+    const todoItem = new Todo(description)
     todoItem.index = this.list.length + 1,
     this.list.push(todoItem)
     localStorage.setItem("todo", JSON.stringify(this.list))
@@ -80,12 +82,35 @@ remove(index){
    this.display()
 }
 
+    
+edit(index, toDo) {
+  this.list[index].description = toDo
+    localStorage.setItem('todo', JSON.stringify(this.list));
+    while (list.firstChild ) {
+      list.removeChild(list.firstChild);
+    }
+      this.display()  
+  }
 
+
+
+change(){
+ 
+  document.addEventListener("keypress", (e)=>{
+    if(e.code==="Enter"){
+      if(e.target.classList.contains("list-item")){
+      e.preventDefault()
+    const text = e.target.value
+    const index = e.target.dataset.listIndex - 1
+      this.edit(index, text)
+      
+}}})
+}
 
     }
 
    
-   
+
 
 
 
