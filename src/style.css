@@ -20,11 +20,13 @@ li {
 
 main {
   width: 50%;
+  max-height: 90vh;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
   box-shadow: rgba(119, 117, 117, 0.66) 0 0.2rem 0.5rem;
+  overflow-y: scroll;
 }
 
 .to-do {
@@ -35,9 +37,9 @@ main {
 i {
   color: rgb(211, 209, 209);
   cursor: pointer;
- 
 }
-i:hover{
+
+i:hover {
   transform: scaleX(1.5);
   color: black;
 }
@@ -47,14 +49,16 @@ li:has(> input) {
   align-items: center;
 }
 
-#toDo, .list-item {
+#toDo,
+.list-item {
   padding: 1vw;
   width: 100%;
   border: none;
   margin-right: 1vw;
   font-style: italic;
 }
-.list-item{
+
+.list-item {
   font-style: normal;
 }
 
@@ -71,22 +75,23 @@ button {
 input:focus {
   outline: none;
   color: rgb(110, 109, 109);
-  
 }
-.div-trash{
+
+.div-trash {
   color: rgb(164, 161, 161);
   display: none;
 }
-.content{
+
+.content {
   display: flex;
   align-items: center;
   width: 100%;
-
 }
 
-.background-color{
+.background-color {
   background-color: red;
 }
-.checked{
+
+.checked {
   text-decoration: line-through;
 }
