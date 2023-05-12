@@ -1,14 +1,14 @@
 import './style.css';
 import List from './crud.js';
 
-
-
+// Create a ne todo list
 const todo = new List()
-todo.display()
-todo.submit()
-todo.change()
-console.log(todo)
 
+todo.display()          // Display to do list
+todo.submit()           // Submit and add new to do task
+todo.change()
+
+//Add edit styling on the list items
 document.addEventListener("focus", (e)=>{
   
       if(e.target.classList.contains("list-item")){
@@ -22,6 +22,7 @@ document.addEventListener("focus", (e)=>{
         
 }}, true)
 
+// Remove edit styling on the list items
 document.addEventListener("blur", (e)=>{
   
     if(e.target.classList.contains("list-item")){
@@ -31,10 +32,11 @@ document.addEventListener("blur", (e)=>{
      
      parent.children[1].style.display = "block"
       parent.children[2].style.display = "none"
-      parent.children[0].children[0].style.opacity = 0
+      parent.children[0].children[0].style.opacity = 1
       
 }}, true)
 
+// Display trash and hide the 3dots after click
 document.addEventListener("click", (e)=>{
   
     if(e.target.classList.contains("dots")){
@@ -45,15 +47,16 @@ document.addEventListener("click", (e)=>{
      
 }})
 
-document.addEventListener("blur", (e)=>{
-  
-    if(e.target.classList.contains("dots")){
-      const parent = e.target.parentNode
-          
-     parent.children[1].style.display = "block"
-      parent.children[2].style.display = "none"     
-     
-}}, true)
+
+// Enable strike through the list item on checkbox click
+// This works only after DOM refresh if added new tasks
+const checkb = document.querySelectorAll(".to-do")
+
+checkb.forEach((box)=>{
+    box.addEventListener("click", (e)=>{
+        e.target.parentNode.children[1].classList.toggle("checked")
+    })
+})
 
 
 

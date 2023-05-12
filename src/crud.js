@@ -5,7 +5,7 @@ const todoInput = document.querySelector('#toDo');
 
 
 
-
+// Todo task object sconstructor
     class Todo{
         constructor(description){
             this.description = description,
@@ -14,11 +14,14 @@ const todoInput = document.querySelector('#toDo');
 
         }
     }
+
+    // To do list constructor
     class List{
         constructor(){
             this.list = JSON.parse(localStorage.getItem('todo')) || [];
         }
-        
+    
+        // Display todo tasks method
    display(){
     this.list.forEach((item) => {        
         const listItem = document.createElement('li');
@@ -36,7 +39,7 @@ const todoInput = document.querySelector('#toDo');
         `
   
         listItem.id = `data-${item.index}`
-        trash.addEventListener("click", (e)=>{
+        trash.addEventListener("mousedown", (e)=>{
         const index = e.target.dataset.listIndex - 1
         this.remove(index)
         })
@@ -48,7 +51,7 @@ const todoInput = document.querySelector('#toDo');
       )
   
    } 
-
+// Add new task method
     add(description){
     const todoItem = new Todo(description)
     todoItem.index = this.list.length + 1,
@@ -61,6 +64,7 @@ const todoInput = document.querySelector('#toDo');
     
 }
 
+//Submit a new to do method
 submit(){
     todoInput.addEventListener("keypress", (e)=>{
         if(e.key==="Enter"){
@@ -69,6 +73,8 @@ submit(){
         todoInput.value = ""
       }})
 }
+
+// Remove a selected to to method
 remove(index){
     this.list.splice(index, 1)
     this.list.forEach((item)=>{
@@ -82,7 +88,7 @@ remove(index){
    this.display()
 }
 
-    
+  //Edit method  
 edit(index, toDo) {
   this.list[index].description = toDo
     localStorage.setItem('todo', JSON.stringify(this.list));
@@ -93,7 +99,7 @@ edit(index, toDo) {
   }
 
 
-
+// Edit a spefic to do method
 change(){
  
   document.addEventListener("keypress", (e)=>{
@@ -108,15 +114,6 @@ change(){
 }
 
     }
-
-   
-
-
-
-
-
-
-
 
 
 export default List
