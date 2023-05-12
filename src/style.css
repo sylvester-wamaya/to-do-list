@@ -71,7 +71,7 @@ button {
 input:focus {
   outline: none;
   color: rgb(110, 109, 109);
-  background-color: red;
+  
 }
 .div-trash{
   color: rgb(164, 161, 161);
@@ -81,6 +81,7 @@ input:focus {
   display: flex;
   align-items: center;
   width: 100%;
+
 }
 
 .background-color{
