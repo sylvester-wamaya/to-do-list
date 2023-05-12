@@ -1,12 +1,13 @@
 import './style.css';
 import List from './crud.js';
+import { checkbox } from './interract';
 
 // Create a ne todo list
 const todo = new List();
 
 todo.display(); // Display to do list
 todo.submit(); // Submit and add new to do task
-todo.change();
+todo.change();  // Edit to do item
 
 // Add edit styling on the list items
 document.addEventListener('focus', (e) => {
@@ -44,12 +45,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Enable strike through the list item on checkbox click
-// This works only after DOM refresh if added new tasks
-const checkb = document.querySelectorAll('.to-do');
+checkbox()
 
-checkb.forEach((box) => {
-  box.addEventListener('click', (e) => {
-    e.target.parentNode.children[1].classList.toggle('checked');
-  });
-});
+
