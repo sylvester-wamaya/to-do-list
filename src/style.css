@@ -29,10 +29,17 @@ main {
 
 .to-do {
   margin-right: 1vw;
+  cursor: pointer;
 }
 
 i {
   color: rgb(211, 209, 209);
+  cursor: pointer;
+ 
+}
+i:hover{
+  transform: scaleX(1.5);
+  color: black;
 }
 
 li:has(> input) {
@@ -58,6 +65,7 @@ button {
   color: rgb(110, 109, 109);
   background-color: hsl(0, 0%, 96%);
   font-size: 100%;
+  cursor: pointer;
 }
 
 input:focus {
@@ -67,7 +75,7 @@ input:focus {
 }
 .div-trash{
   color: rgb(164, 161, 161);
- 
+  display: none;
 }
 .content{
   display: flex;
