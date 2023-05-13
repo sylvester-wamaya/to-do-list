@@ -4,7 +4,7 @@
 
 <div align="center">
 
-
+<img src="src/logo dark (1).PNG" alt="logo" width="140"  height="auto" />
 
 <h3><b>To do List Website</b></h3>
 
@@ -78,11 +78,6 @@ To do List Website is a project that allows a user to add to do tasks, display t
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Coming soon...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
