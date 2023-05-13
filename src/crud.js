@@ -66,7 +66,7 @@ class List {
     this.list.splice(index, 1);
     this.list.forEach((item) => {
       if (item.index > index) {
-       this.reindexTasks()
+        this.reindexTasks();
       }
     });
     localStorage.setItem('todo', JSON.stringify(this.list));
@@ -115,9 +115,9 @@ class List {
   // delete method
   clear() {
     this.list = this.list.filter((item) => item.completed !== true);
-    this.reindexTasks()
+    this.reindexTasks();
     localStorage.setItem('todo', JSON.stringify(this.list));
- 
+
     while (list.firstChild) {
       list.removeChild(list.firstChild);
     }

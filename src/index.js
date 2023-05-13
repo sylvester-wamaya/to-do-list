@@ -48,5 +48,3 @@ document.addEventListener('click', (e) => {
 });
 
 todo.defaultComplete();
-
-console.log(todo)
