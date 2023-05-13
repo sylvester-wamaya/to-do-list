@@ -66,7 +66,7 @@ class List {
     this.list.splice(index, 1);
     this.list.forEach((item) => {
       if (item.index > index) {
-        item.index -= 1;
+       this.reindexTasks()
       }
     });
     localStorage.setItem('todo', JSON.stringify(this.list));
@@ -103,16 +103,25 @@ class List {
   // Checkbox method
   checked(index) {
     this.list[index].completed = !JSON.parse(localStorage.getItem('todo'))[index].completed;
-
     localStorage.setItem('todo', JSON.stringify(this.list));
+  }
+
+  reindexTasks() {
+    this.list.forEach((task, index) => {
+      task.index = index + 1;
+    });
   }
 
   // delete method
   clear() {
     this.list = this.list.filter((item) => item.completed !== true);
-
+    this.reindexTasks()
     localStorage.setItem('todo', JSON.stringify(this.list));
-    window.location.reload();
+ 
+    while (list.firstChild) {
+      list.removeChild(list.firstChild);
+    }
+    this.display();
   }
 
   // Persists the default value of completed on reload

@@ -49,4 +49,4 @@ document.addEventListener('click', (e) => {
 
 todo.defaultComplete();
 
-// checkbox()
+console.log(todo)
