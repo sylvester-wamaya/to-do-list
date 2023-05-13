@@ -4,7 +4,7 @@
 
 <div align="center">
 
-
+<img src="src/logo dark (1).PNG" alt="logo" width="140"  height="auto" />
 
 <h3><b>To do List Website</b></h3>
 
