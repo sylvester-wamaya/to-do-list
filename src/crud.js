@@ -99,7 +99,7 @@ class List {
       }
     });
   }
-
+// Checkbox method
   checked(index){
     
       this.list[index].completed = !JSON.parse(localStorage.getItem('todo'))[index].completed
@@ -108,13 +108,11 @@ class List {
       console.log(this.list[index].completed)
   }
 clear(){
-  const filtered = this.list.filter((item)=>{
-    item.completed !== true
-  })
-  console.log(filtered)
-  localStorage.setItem('todo', JSON.stringify(filtered));
-// window.location.reload()
-  this.display();
+  this.list = this.list.filter((item)=> item.completed !== true)
+  console.log(this.list)
+  localStorage.setItem('todo', JSON.stringify(this.list));
+window.location.reload()
+
 }
   
 }

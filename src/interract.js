@@ -13,7 +13,7 @@
 // //       });
 // // }
 
-
+// Checkbox function
 export function checkvalue(list) {
    
     document.addEventListener('change', (e) => {
