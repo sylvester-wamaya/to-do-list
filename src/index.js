@@ -47,4 +47,5 @@ document.addEventListener('click', (e) => {
   }
 });
 
-todo.defaultComplete();
+//todo.defaultComplete();
+console.log(todo)

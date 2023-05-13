@@ -125,12 +125,12 @@ class List {
   }
 
   // Persists the default value of completed on reload
-  defaultComplete() {
-    this.list.forEach((todo) => {
-      todo.completed = false;
-      localStorage.setItem('todo', JSON.stringify(this.list));
-    });
-  }
+  // defaultComplete() {
+  //   this.list.forEach((todo) => {
+  //     todo.completed = false;
+  //     localStorage.setItem('todo', JSON.stringify(this.list));
+  //   });
+  // }
 }
 
 export default List;
