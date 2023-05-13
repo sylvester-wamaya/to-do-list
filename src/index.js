@@ -1,6 +1,6 @@
 import './style.css';
 import List from './crud.js';
-import { checkbox } from './interract';
+import { checkvalue, clearAll } from './interract.js';
 
 // Create a ne todo list
 const todo = new List();
@@ -8,7 +8,9 @@ const todo = new List();
 todo.display(); // Display to do list
 todo.submit(); // Submit and add new to do task
 todo.change();  // Edit to do item
-
+checkvalue(todo)
+clearAll(todo)
+console.log(todo)
 // Add edit styling on the list items
 document.addEventListener('focus', (e) => {
   if (e.target.classList.contains('list-item')) {
@@ -45,6 +47,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-checkbox()
+//checkbox()
 
 
