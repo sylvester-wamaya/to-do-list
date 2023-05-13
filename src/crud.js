@@ -114,6 +114,13 @@ clear(){
 window.location.reload()
 
 }
+defaultComplete(){
+  this.list.forEach((todo) => {
+    todo.completed = false;
+    localStorage.setItem('todo', JSON.stringify(this.list));
+  });
+}
+
   
 }
 
