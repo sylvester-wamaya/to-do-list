@@ -139,7 +139,7 @@ npm start
 
 ### Deployment
 
-> Coming soon...
+[Deployment Link](https://sylvester-wamaya.github.io/to-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
