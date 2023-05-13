@@ -99,29 +99,29 @@ class List {
       }
     });
   }
-// Checkbox method
-  checked(index){
-    
-      this.list[index].completed = !JSON.parse(localStorage.getItem('todo'))[index].completed
-      
-      localStorage.setItem('todo', JSON.stringify(this.list));
-      console.log(this.list[index].completed)
-  }
-clear(){
-  this.list = this.list.filter((item)=> item.completed !== true)
-  console.log(this.list)
-  localStorage.setItem('todo', JSON.stringify(this.list));
-window.location.reload()
 
-}
-defaultComplete(){
-  this.list.forEach((todo) => {
-    todo.completed = false;
+  // Checkbox method
+  checked(index) {
+    this.list[index].completed = !JSON.parse(localStorage.getItem('todo'))[index].completed;
+
     localStorage.setItem('todo', JSON.stringify(this.list));
-  });
-}
+  }
 
-  
+  // delete method
+  clear() {
+    this.list = this.list.filter((item) => item.completed !== true);
+
+    localStorage.setItem('todo', JSON.stringify(this.list));
+    window.location.reload();
+  }
+
+  // Persists the default value of completed on reload
+  defaultComplete() {
+    this.list.forEach((todo) => {
+      todo.completed = false;
+      localStorage.setItem('todo', JSON.stringify(this.list));
+    });
+  }
 }
 
 export default List;

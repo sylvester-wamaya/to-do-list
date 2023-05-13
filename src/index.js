@@ -7,10 +7,10 @@ const todo = new List();
 
 todo.display(); // Display to do list
 todo.submit(); // Submit and add new to do task
-todo.change();  // Edit to do item
-checkvalue(todo)
-clearAll(todo)
-console.log(todo)
+todo.change(); // Edit to do item
+checkvalue(todo);
+clearAll(todo);
+
 // Add edit styling on the list items
 document.addEventListener('focus', (e) => {
   if (e.target.classList.contains('list-item')) {
@@ -47,9 +47,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
+todo.defaultComplete();
 
-todo.defaultComplete()
-
-//checkbox()
-
-
+// checkbox()
