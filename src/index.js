@@ -46,5 +46,4 @@ document.addEventListener('click', (e) => {
     parent.children[2].style.display = 'block';
   }
 });
-
 // todo.defaultComplete();
